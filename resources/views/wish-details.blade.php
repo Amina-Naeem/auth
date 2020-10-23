@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>All Wish</title>
+    <title>See Wish</title>
     <link href="{{ asset('/customeAuth/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
@@ -32,42 +32,36 @@
                 <div class="col-lg-7">
                     <div class="p-5">
                         <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">{{ strtoupper(Auth::user()->name) }} WishList </h1>
+                            <h1 class="h4 text-gray-900 mb-4"> {{ strtoupper(Auth::user()->name) }} Wish:{{$wish->no}} Details</h1>
                         </div>
-                        <div>
-                        <a href="/addWishView" class="btn btn-success p-1">
-                            Make New Wish
-                        </a>
-                    </div>
-                        @if(Session::has('wish_deleted'))
-                            <div class="alert alert-success" role="alert">
-                                {{Session::get('wish_deleted')}}
-                            </div>
-                        @endif
-<table class="table table-striped">
-<thead>
-<tr>
-    <th>No.</th>
-    <th>Wish</th>
-    <th>Fulfilled</th>
-    <th>Actions</th>
-</tr>
-</thead>
-    <tbody>
-    @foreach($wishes as $wish)
-        <tr>
-            <td>{{$wish->no}}</td>
-            <td>{{$wish->wish}}</td>
-            <td>{{$wish->fulfilled}}</td>
-            <td><a href="/wishes/{{$wish->no}}" class="btn btn-info">Details</a>
-                <a href="/update-wish/{{$wish->no}}" class="btn btn-success">Update</a>
-                <a href="/delete-wish/{{$wish->no}}" class="btn btn-danger">Delete</a>
 
-            </td>
-        </tr>
-    @endforeach
-    </tbody>
-</table>
+                            <div class="form-group row">
+                                <div class="col-sm-12 mb-3 mb-sm-0">
+                                    <label>Wish No.</label>
+                                    <p  class="form-control form-control-user">{{$wish->no}}</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12 mb-3 mb-sm-0">
+                                <label>Wish</label>
+                                <p class="form-control form-control-user" rows="3"  >{{$wish->wish}}</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12 mb-3 mb-sm-0">
+                                    <label>Fulfilled</label>
+                                    <p class="form-control form-control-user">{{$wish->fulfilled}}</p>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12 mb-3 mb-sm-0">
+                                    <label>Created At</label>
+                                    <p class="form-control form-control-user">{{$wish->created_at}}</p>
+                                </div>
+                            </div>
+
+                                <a href="/wishes" class="btn btn-success p-1">Back</a>
+
 
                     </div>
                 </div>

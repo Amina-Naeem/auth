@@ -29,4 +29,26 @@ class WishController extends Controller
         return view('wishes',compact('wishes'));
     }
   //
+    public function getWishDetails($no){
+      $wish=Wish::where('no',$no)->where('email',Auth::user()->email)->first();
+return view('wish-details',compact('wish'));
+    }
+public function deleteWish($no){
+      Wish::where('no',$no)->where('email',Auth::user()->email)->delete();
+      return back()->with('wish_deleted','Wish has been deleted successfully');
+}
+public function updateWish($no){
+      $wish=Wish::where('no',$no)->where('email',Auth::user()->email)->first();
+      return view('update-wish',compact('wish'));
+}
+    public function updateWishData(Request $request){
+
+       $wish=Wish::where('no',$request->no)->where('email',Auth::user()->email)->first();
+        $wish->no=$request->no;
+       $wish->wish=$request->wish;
+        $wish->fulfilled=$request->fulfilled;
+      $wish->email=Auth::user()->email;
+       $wish=DB::table('wishes')->where('email',Auth::user()->email)->where('no',$request->no)->update(['fulfilled' => $request->fulfilled]);
+        return back()->with('wish_updated','Wish has been updated successfully!');
+    }
 }
