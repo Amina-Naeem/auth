@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+@extends('layouts.app')
+@section('content')
+
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -22,15 +25,26 @@
 
 <body class="bg-gradient-primary">
 
+
+
 <div class="container">
 
     <div class="card o-hidden border-0 shadow-lg my-5">
-        <div class="card-body p-0">
+        <div class="card-body p-0">          <div class="card-body">
+                @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
+                @endif
+
+                {{ __('You are logged in!') }}
+            </div>
             <!-- Nested Row within Card Body -->
             <div class="row">
                 <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
                 <div class="col-lg-7">
                     <div class="p-5">
+
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">{{ strtoupper(Auth::user()->name) }} WishList </h1>
                         </div>
@@ -38,24 +52,31 @@
                         <a href="/addWishView" class="btn btn-success p-1">
                             Make New Wish
                         </a>
+                            <hr>
                     </div>
                         @if(Session::has('wish_deleted'))
                             <div class="alert alert-success" role="alert">
                                 {{Session::get('wish_deleted')}}
                             </div>
                         @endif
-<table class="table table-striped">
+<table class="table table-striped table-bordered table-">
 <thead>
 <tr>
     <th>No.</th>
+    <th>ID.</th>
     <th>Wish</th>
     <th>Fulfilled</th>
     <th>Actions</th>
 </tr>
 </thead>
     <tbody>
+    @php
+      $i=0;
+@endphp
     @foreach($wishes as $wish)
+
         <tr>
+            <td>{{++$i}}.</td>
             <td>{{$wish->no}}</td>
             <td>{{$wish->wish}}</td>
             <td>{{$wish->fulfilled}}</td>
@@ -66,6 +87,9 @@
             </td>
         </tr>
     @endforeach
+    @php
+    $i=0;
+    @endphp
     </tbody>
 </table>
 
@@ -90,3 +114,4 @@
 </body>
 
 </html>
+@endsection

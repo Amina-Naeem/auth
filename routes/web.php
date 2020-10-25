@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/',function(){return view('welcome');});
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home',[WishController::class,'getWish'])->name('wish.list');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/addWishView',[WishController::class, 'addWish']);
 Route::post('/create-post',[WishController::class,'createWish'])->name('wish.create');
 Route::get('/wishes',[WishController::class,'getWish'])->name('wish.list');

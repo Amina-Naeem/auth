@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +40,7 @@
 
                             <div class="form-group row">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
-                                    <label>Wish No.</label>
+                                    <label>Wish ID.</label>
                                     <p  class="form-control form-control-user">{{$wish->no}}</p>
                                 </div>
                             </div>
@@ -60,7 +63,10 @@
                                 </div>
                             </div>
 
-                                <a href="/wishes" class="btn btn-success p-1">Back</a>
+                        <div class="p-2 form-group row">
+                            <hr>
+                            <a href="/wishes" class="btn btn-success p-1">Back</a>
+                        </div>
 
 
                     </div>
@@ -84,3 +90,4 @@
 </body>
 
 </html>
+@endsection

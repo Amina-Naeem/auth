@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f165794d-db62-4a0e-8d17-578e21baed38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/update-wish.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/wish-details.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WishController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WishController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/addWishView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/addWishView.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/update-wish.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/update-wish.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/wish-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wish-details.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/wishes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wishes.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -169,7 +170,7 @@
       <updated>1603296667831</updated>
       <workItem from="1603296670058" duration="22132000" />
       <workItem from="1603381580285" duration="3120000" />
-      <workItem from="1603385095380" duration="28110000" />
+      <workItem from="1603385095380" duration="38088000" />
     </task>
     <servers />
   </component>
@@ -193,10 +194,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="427" y="39" width="586" height="822" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1603322139676" />
-    <state x="692" y="159" width="670" height="742" key="search.everywhere.popup" timestamp="1603322292146">
+    <state x="692" y="159" width="670" height="742" key="search.everywhere.popup" timestamp="1603551225097">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="692" y="159" width="670" height="742" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1603322292146" />
+    <state x="692" y="159" width="670" height="742" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1603551225097" />
     <state x="692" y="168" width="670" height="676" key="search.everywhere.popup/0.23.1440.821@0.23.1440.821" timestamp="1603314268047" />
   </component>
 </project>

@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +35,7 @@
                 <div class="col-lg-7">
                     <div class="p-5">
                         <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Update Wish {{ strtoupper(Auth::user()->name) }}</h1>
+                            <h1 class="h4 text-gray-900 mb-4">Update Wish</h1>
                         </div>
                         @if(Session::has('wish_updated'))
                             <div class="alert alert-success" role="alert">
@@ -44,23 +47,26 @@
                             <div class="form-group row">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
                                     <label for="no">Wish ID.</label>
-                                    <input type="hidden" id="no" name="no" value="{{$wish->no}}" class="form-control form-control-user">
+                                    <input type="number" readonly id="no" name="no" class="form-control form-control-user" value="{{$wish->no}}">
+
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="wish">Wish</label>
-                                <textarea  name="wish"  class="form-control form-control-user" rows="3">{{$wish->wish}}</textarea>
+                                <p  name="wish"  class="form-control form-control-user" rows="3"><b>{{$wish->wish}}</b></p>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
                                     <label for="fulfilled">Fulfilled</label>
-                                    <input name="fulfilled" id="fulfilled" value="{{$wish->fulfilled}}" type="text" class="form-control form-control-user"  placeholder="yes/no"  >
+                                    <input name="fulfilled" id="fulfilled" value="{{$wish->fulfilled}}" type="text" class="form-control form-control-user"  required placeholder="yes/no/other"  >
+
                                 </div>
                             </div>
                             <button type="submit"  class="btn btn-success btn-primary btn-user btn-block">
                                 Update Wish
                             </button>
                             <div class="p-2 form-group row">
+                                <hr>
                             <a href="/wishes" class="btn btn-success p-1">Back</a>
                             </div>
 </form>
@@ -86,3 +92,4 @@
 </body>
 
 </html>
+@endsection

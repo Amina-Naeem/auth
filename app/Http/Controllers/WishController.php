@@ -14,13 +14,17 @@ class WishController extends Controller
       return view('addWishView');
   }
     public function createWish(Request $request){
-       $wish= new Wish();
+        $wishid=DB::table('wishes')->where('email',Auth::user()->email)->where('no',$request->no)->first();
+        if($wishid==null)
+        {    $wish= new Wish();
        $wish->no = $request->no;
        $wish->wish=$request->wish;
         $wish->fulfilled=$request->fulfilled;
         $wish->email=Auth::user()->email;
         $wish->save();
-        return back()->with('wish_created','Wish has been created successfully!');
+        return back()->with('wish_created','Wish has been created successfully!');}
+        else
+            return back()->with('wish_created','Wish ID exists');
     }
     public function getWish(){
       $currentuser=Auth::user()->email;
@@ -44,7 +48,7 @@ public function updateWish($no){
     public function updateWishData(Request $request){
 
        $wish=Wish::where('no',$request->no)->where('email',Auth::user()->email)->first();
-        $wish->no=$request->no;
+       $wish->no=$request->no;
        $wish->wish=$request->wish;
         $wish->fulfilled=$request->fulfilled;
       $wish->email=Auth::user()->email;
