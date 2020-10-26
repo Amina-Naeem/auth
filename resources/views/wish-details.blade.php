@@ -35,37 +35,37 @@
                 <div class="col-lg-7">
                     <div class="p-5">
                         <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4"> {{ strtoupper(Auth::user()->name) }} Wish:{{$wish->no}} Details</h1>
+                            <h1 class="h4 text-gray-900 mb-4"> {{ strtoupper(Auth::user()->name) }}  @lang('home.wish')  @lang('home.details') </h1>
                         </div>
 
                             <div class="form-group row">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
-                                    <label>Wish ID.</label>
+                                    <label>@lang('home.wish') @lang('home.id') </label>
                                     <p  class="form-control form-control-user">{{$wish->no}}</p>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
-                                <label>Wish</label>
+                                <label>@lang('home.wish')</label>
                                 <p class="form-control form-control-user" rows="3"  >{{$wish->wish}}</p>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
-                                    <label>Fulfilled</label>
+                                    <label> @lang('home.fulfilled')</label>
                                     <p class="form-control form-control-user">{{$wish->fulfilled}}</p>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
-                                    <label>Created At</label>
+                                    <label>@lang('home.createdAt')</label>
                                     <p class="form-control form-control-user">{{$wish->created_at}}</p>
                                 </div>
                             </div>
 
                         <div class="p-2 form-group row">
                             <hr>
-                            <a href="/wishes" class="btn btn-success p-1">Back</a>
+                            <a href="/wishes" class="btn btn-success p-1">@lang('home.back')</a>
                         </div>
 
 

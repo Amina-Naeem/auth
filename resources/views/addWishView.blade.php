@@ -35,7 +35,7 @@
                 <div class="col-lg-7">
                     <div class="p-5">
                         <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Add a Wish</h1>
+                            <h1 class="h4 text-gray-900 mb-4">Add a Wish>>@lang('home.addaWish')</h1>
                         </div>
                         @if(Session::has('wish_created'))
                             <div class="alert alert-success" role="alert">
@@ -46,26 +46,26 @@
                             @csrf
                             <div class="form-group row">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
-                                    <label for="no">Wish ID.</label>
-                                    <input  id="no" type="number" name="no" required class="form-control form-control-user" placeholder="Wish ID">
+                                    <label for="no">@lang('home.wish')@lang('home.id')</label>
+                                    <input  id="no" type="number" name="no" required class="form-control form-control-user" placeholder="@lang('home.wish')@lang('home.id')">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="wish">Wish</label>
-                                <textarea id="wish" required type="text" class="form-control form-control-user" name="wish" rows="3"  placeholder="Make a Wish"></textarea>
+                                <label for="wish">@lang('home.wish')</label>
+                                <textarea id="wish" required type="text" class="form-control form-control-user" name="wish" rows="3"  placeholder="@lang('home.makenewWish')"></textarea>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
-                                    <label for="fulfilled">Fulfilled</label>
-                                    <input id="fulfilled" type="text" class="form-control form-control-user" required name="fulfilled" placeholder="yes/no/other">
+                                    <label for="fulfilled">@lang('home.fulfilled')</label>
+                                    <input id="fulfilled" type="text" class="form-control form-control-user" required name="fulfilled" placeholder="@lang('home.yes')/@lang('home.no')/@lang('home.other')">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-success btn-primary btn-user btn-block">
-                         Add Wish
+                                @lang('home.addaWish')
                             </button>
                             <div class="p-2 form-group row">
                                 <hr>
-                                <a href="/wishes" class="btn btn-success p-1">Back</a>
+                                <a href="/wishes" class="btn btn-success p-1">@lang('home.back')</a>
                             </div>
                         </form>
 

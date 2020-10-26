@@ -37,7 +37,7 @@
                     </div>
                 @endif
 
-                {{ __('You are logged in!') }}
+                {{ __('You are logged in!') }}>>@lang('home.YouareLoggedIn')!
             </div>
             <!-- Nested Row within Card Body -->
             <div class="row">
@@ -50,7 +50,7 @@
                         </div>
                         <div>
                         <a href="/addWishView" class="btn btn-success p-1">
-                            Make New Wish
+                            Make New Wish>>@lang('home.makenewWish')
                         </a>
                             <hr>
                     </div>
@@ -62,11 +62,11 @@
 <table class="table table-striped table-bordered table-">
 <thead>
 <tr>
-    <th>No.</th>
-    <th>ID.</th>
-    <th>Wish</th>
-    <th>Fulfilled</th>
-    <th>Actions</th>
+    <th>@lang('home.no')</th>
+    <th>@lang('home.wish')@lang('home.id')</th>
+    <th>@lang('home.wish')</th>
+    <th>@lang('home.fulfilled')</th>
+    <th>@lang('home.action')</th>
 </tr>
 </thead>
     <tbody>
@@ -80,9 +80,9 @@
             <td>{{$wish->no}}</td>
             <td>{{$wish->wish}}</td>
             <td>{{$wish->fulfilled}}</td>
-            <td><a href="/wishes/{{$wish->no}}" class="btn btn-info">Details</a>
-                <a href="/update-wish/{{$wish->no}}" class="btn btn-success">Update</a>
-                <a href="/delete-wish/{{$wish->no}}" class="btn btn-danger">Delete</a>
+            <td><a href="/wishes/{{$wish->no}}" class="btn btn-info">@lang('home.details')</a>
+                <a href="/update-wish/{{$wish->no}}" class="btn btn-success">@lang('home.update')</a>
+                <a href="/delete-wish/{{$wish->no}}" class="btn btn-danger">@lang('home.delete')</a>
 
             </td>
         </tr>

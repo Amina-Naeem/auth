@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,13 +35,13 @@
                 <div class="col-lg-7">
                     <div class="p-5">
                         <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                            <h1 class="h4 text-gray-900 mb-4">Create an Account!>>@lang('home.createAccount')</h1>
                         </div>
                         <form method="POST" class="user" action="{{ route('register') }}">
                             @csrf
                             <div class="form-group row">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
-                                    <input  id="name" type="text" class="form-control form-control-user @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Name">
+                                    <input  id="name" type="text" class="form-control form-control-user @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Name>>@lang('home.name')">
                                     @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -47,7 +50,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input id="email" type="email" class="form-control form-control-user @error('email') is-invalid @enderror"  name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email Address">
+                                <input id="email" type="email" class="form-control form-control-user @error('email') is-invalid @enderror"  name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email Address>>@lang('home.email-menu')">
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -56,7 +59,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input id="password" type="password" class="form-control form-control-user @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password">
+                                    <input id="password" type="password" class="form-control form-control-user @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password>>@lang('home.password')">
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -64,11 +67,11 @@
                                     @enderror
                                 </div>
                                 <div class="col-sm-6">
-                                    <input id="password-confirm" type="password" class="form-control form-control-user" name="password_confirmation" required autocomplete="new-password" placeholder="Repeat Password">
+                                    <input id="password-confirm" type="password" class="form-control form-control-user" name="password_confirmation" required autocomplete="new-password" placeholder="Repeat Password>>@lang('home.re-password')">
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary btn-user btn-block">
-                                {{ __('Register') }}
+                                {{ __('Register') }}>>@lang('home.register-menu')
                             </button>
                             <hr>
 
@@ -77,7 +80,7 @@
                         <hr>
 
                         <div class="text-center">
-                            <a class="small" href="/login">Already have an account? Login!</a>
+                            <a class="small" href="/login">Already have an account?>>@lang('home.alreadyhaveanAccount')</a>
                         </div>
                     </div>
                 </div>
@@ -100,3 +103,4 @@
 </body>
 
 </html>
+@endsection

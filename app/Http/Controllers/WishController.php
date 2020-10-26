@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Wish;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Lang;
 
 class WishController extends Controller
 {
@@ -22,9 +23,11 @@ class WishController extends Controller
         $wish->fulfilled=$request->fulfilled;
         $wish->email=Auth::user()->email;
         $wish->save();
-        return back()->with('wish_created','Wish has been created successfully!');}
-        else
-            return back()->with('wish_created','Wish ID exists');
+            $msg= Lang::get('home.created');
+        return back()->with('wish_created',$msg);}
+        else{
+            $msg= Lang::get('home.idExist');
+            return back()->with('wish_created',$msg);}
     }
     public function getWish(){
       $currentuser=Auth::user()->email;
@@ -39,7 +42,8 @@ return view('wish-details',compact('wish'));
     }
 public function deleteWish($no){
       Wish::where('no',$no)->where('email',Auth::user()->email)->delete();
-      return back()->with('wish_deleted','Wish has been deleted successfully');
+    $msg= Lang::get('home.deleted');
+      return back()->with('wish_deleted',$msg);
 }
 public function updateWish($no){
       $wish=Wish::where('no',$no)->where('email',Auth::user()->email)->first();
@@ -53,6 +57,8 @@ public function updateWish($no){
         $wish->fulfilled=$request->fulfilled;
       $wish->email=Auth::user()->email;
        $wish=DB::table('wishes')->where('email',Auth::user()->email)->where('no',$request->no)->update(['fulfilled' => $request->fulfilled]);
-        return back()->with('wish_updated','Wish has been updated successfully!');
+
+      $msg= Lang::get('home.updated');
+        return back()->with('wish_updated',$msg);
     }
 }

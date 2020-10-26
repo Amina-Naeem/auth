@@ -1,4 +1,6 @@
+@extends('layouts.app')
 
+@section('content')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -38,16 +40,16 @@
                         <div class="col-lg-7">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Welcome to WishList</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">Welcome to WishList>>@lang('home.WelcometoWishlist')</h1>
                                     @if (Route::has('login'))
                                         <div><!-- class="hidden fixed top-0 right-0 px-6 py-4 sm:block">-->
                                             @auth
                                                 <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
                                             @else
-                                                <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
+                                                <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login>>@lang('home.login-menu')</a>
 
                                                 @if (Route::has('register'))
-                                                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                                                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register>>@lang('home.register-menu')</a>
                                                 @endif
                                             @endif
                                         </div>
@@ -72,3 +74,4 @@
         <script src="js/sb-admin-2.min.js"></script>
     </body>
 </html>
+@endsection

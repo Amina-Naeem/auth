@@ -3,13 +3,34 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f165794d-db62-4a0e-8d17-578e21baed38" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WishController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WishController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/addWishView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/addWishView.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/update-wish.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/update-wish.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/wish-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wish-details.blade.php" afterDir="false" />
@@ -142,7 +163,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1jC8Mh1lr7Mce5MPyjRrTFUC9SR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -150,9 +173,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/sp" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/lang/sp" />
+      <recent name="$PROJECT_DIR$/resources/lang/ru" />
+      <recent name="$PROJECT_DIR$/resources/lang/fr" />
+      <recent name="$PROJECT_DIR$/resources/lang/en" />
+      <recent name="$PROJECT_DIR$/resources/lang/ch" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -170,12 +202,24 @@
       <updated>1603296667831</updated>
       <workItem from="1603296670058" duration="22132000" />
       <workItem from="1603381580285" duration="3120000" />
-      <workItem from="1603385095380" duration="38088000" />
+      <workItem from="1603385095380" duration="38457000" />
+      <workItem from="1603668205948" duration="8963000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="907" y="361" key="Github.ShareDialog" timestamp="1603414973604">
@@ -190,14 +234,18 @@
       <screen x="0" y="23" width="1440" height="812" />
     </state>
     <state x="805" y="163" key="NewPhpClassDialog/0.23.1440.812@0.23.1440.812" timestamp="1603385890741" />
+    <state x="543" y="380" key="NewPhpFileDialog" timestamp="1603670744016">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="543" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1603670744016" />
     <state x="427" y="39" width="586" height="822" key="find.popup" timestamp="1603322139676">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="427" y="39" width="586" height="822" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1603322139676" />
-    <state x="692" y="159" width="670" height="742" key="search.everywhere.popup" timestamp="1603551225097">
+    <state x="692" y="159" width="670" height="742" key="search.everywhere.popup" timestamp="1603669785629">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="692" y="159" width="670" height="742" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1603551225097" />
+    <state x="692" y="159" width="670" height="742" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1603669785629" />
     <state x="692" y="168" width="670" height="676" key="search.everywhere.popup/0.23.1440.821@0.23.1440.821" timestamp="1603314268047" />
   </component>
 </project>
