@@ -37,10 +37,10 @@
                     </div>
                 @endif
 
-                {{ __('You are logged in!') }}>>@lang('home.YouareLoggedIn')!
+              @lang('home.YouareLoggedIn')!
             </div>
             <!-- Nested Row within Card Body -->
-            <div class="row">
+            <div class="row ">
                 <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
                 <div class="col-lg-7">
                     <div class="p-5">
@@ -50,7 +50,7 @@
                         </div>
                         <div>
                         <a href="/addWishView" class="btn btn-success p-1">
-                            Make New Wish>>@lang('home.makenewWish')
+                           @lang('home.makenewWish')
                         </a>
                             <hr>
                     </div>
@@ -59,7 +59,7 @@
                                 {{Session::get('wish_deleted')}}
                             </div>
                         @endif
-<table class="table table-striped table-bordered table-">
+<table class="table table-striped table-bordered table- text-gray-900">
 <thead>
 <tr>
     <th>@lang('home.no')</th>

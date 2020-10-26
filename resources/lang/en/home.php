@@ -32,5 +32,7 @@ return [
     'created'=>'Wish has been created Successfully',
     'updated'=>'Wish has been updated Successfully',
     'deleted'=>'Wish has been deleted Successfully',
+    'welcomeMSG'=>'WishList allows you to add your wishes in the form of the List. Once you are a registered user of the WishList, you can check your wishes` details, update them and also delete them from the record.
+It will require a unique ID for every single wish and prompts error messages if something goes wrong, to let user make changes meanwhile.',
     ]
     ;

@@ -38,25 +38,25 @@
                             <h1 class="h4 text-gray-900 mb-4"> {{ strtoupper(Auth::user()->name) }}  @lang('home.wish')  @lang('home.details') </h1>
                         </div>
 
-                            <div class="form-group row">
-                                <div class="col-sm-12 mb-3 mb-sm-0">
+                            <div class="form-group row text-gray-900">
+                                <div class="col-sm-12 mb-3 mb-sm-0 ">
                                     <label>@lang('home.wish') @lang('home.id') </label>
                                     <p  class="form-control form-control-user">{{$wish->no}}</p>
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group row text-gray-900">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
                                 <label>@lang('home.wish')</label>
                                 <p class="form-control form-control-user" rows="3"  >{{$wish->wish}}</p>
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group row text-gray-900">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
                                     <label> @lang('home.fulfilled')</label>
                                     <p class="form-control form-control-user">{{$wish->fulfilled}}</p>
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group row text-gray-900">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
                                     <label>@lang('home.createdAt')</label>
                                     <p class="form-control form-control-user">{{$wish->created_at}}</p>

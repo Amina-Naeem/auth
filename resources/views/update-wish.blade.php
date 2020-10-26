@@ -44,18 +44,18 @@
                         @endif
 <form method="POST" action="{{route('wish.update')}}">
     @csrf
-                            <div class="form-group row">
+                            <div class="form-group row text-gray-900">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
                                     <label for="no">@lang('home.wish')@lang('home.id')</label>
                                     <input type="number" readonly id="no" name="no" class="form-control form-control-user" value="{{$wish->no}}">
 
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group text-gray-900">
                                 <label for="wish">@lang('home.wish')</label>
                                 <p  name="wish"  class="form-control form-control-user" rows="3"><b>{{$wish->wish}}</b></p>
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group row text-gray-900">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
                                     <label for="fulfilled">@lang('home.fulfilled')</label>
                                     <input name="fulfilled" id="fulfilled" value="{{$wish->fulfilled}}" type="text" class="form-control form-control-user"  required placeholder="@lang('home.yes')/@lang('home.no')/@lang('home.other')"  >

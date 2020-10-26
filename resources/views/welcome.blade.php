@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>WishList</title>
         <link href="{{ asset('/customeAuth/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 
         <!-- Fonts -->
@@ -40,16 +40,17 @@
                         <div class="col-lg-7">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Welcome to WishList>>@lang('home.WelcometoWishlist')</h1>
+                                    <h1 class="h4 text-gray-900 mb-4" style="font-size: x-large"><b>@lang('home.WelcometoWishlist')</b></h1>
+                                    <p class="text-gray-900" style="font-size: large">@lang('home.welcomeMSG') </p>
                                     @if (Route::has('login'))
-                                        <div><!-- class="hidden fixed top-0 right-0 px-6 py-4 sm:block">-->
+                                        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block"><!-- class="hidden fixed top-0 right-0 px-6 py-4 sm:block">-->
                                             @auth
-                                                <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                                                <a href="{{ url('/home') }}" class=" text-gray-900 underline">Home</a>
                                             @else
-                                                <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login>>@lang('home.login-menu')</a>
+                                                <a href="{{ route('login') }}" class=" text-gray-900 underline">@lang('home.login-menu')</a>
 
                                                 @if (Route::has('register'))
-                                                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register>>@lang('home.register-menu')</a>
+                                                    <a href="{{ route('register') }}" class="ml-4  text-gray-900 underline">@lang('home.register-menu')</a>
                                                 @endif
                                             @endif
                                         </div>

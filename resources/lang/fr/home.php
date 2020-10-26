@@ -32,5 +32,7 @@ return [
     'created'=>'Le souhait a été créé avec succès',
     'updated'=>'Le souhait a été mis à jour avec succès',
     'deleted'=>'Le souhait a été supprimé avec succès',
+    'welcomeMSG'=>'WishList vous permet d`ajouter vos souhaits sous forme de liste. Une fois que vous êtes un utilisateur enregistré de la WishList, vous pouvez vérifier les détails de vos souhaits, les mettre à jour et également les supprimer de l`enregistrement.
+                                        Il nécessitera un identifiant unique pour chaque souhait et affichera des messages d`erreur en cas de problème, pour permettre à l`utilisateur de faire des modifications entre-temps.',
 ]
     ;

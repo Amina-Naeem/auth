@@ -35,7 +35,7 @@
                 <div class="col-lg-7">
                     <div class="p-5">
                         <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Add a Wish>>@lang('home.addaWish')</h1>
+                            <h1 class="h4 text-gray-900 mb-4">@lang('home.addaWish')</h1>
                         </div>
                         @if(Session::has('wish_created'))
                             <div class="alert alert-success" role="alert">
@@ -44,17 +44,17 @@
                         @endif
                         <form method="POST" action="{{route('wish.create')}}">
                             @csrf
-                            <div class="form-group row">
+                            <div class="form-group row text-gray-900">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
                                     <label for="no">@lang('home.wish')@lang('home.id')</label>
                                     <input  id="no" type="number" name="no" required class="form-control form-control-user" placeholder="@lang('home.wish')@lang('home.id')">
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group text-gray-900">
                                 <label for="wish">@lang('home.wish')</label>
-                                <textarea id="wish" required type="text" class="form-control form-control-user" name="wish" rows="3"  placeholder="@lang('home.makenewWish')"></textarea>
+                                <input id="wish" required type="text" class="form-control form-control-user" name="wish" rows="3"  placeholder="@lang('home.makenewWish')"></input>
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group row text-gray-900">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
                                     <label for="fulfilled">@lang('home.fulfilled')</label>
                                     <input id="fulfilled" type="text" class="form-control form-control-user" required name="fulfilled" placeholder="@lang('home.yes')/@lang('home.no')/@lang('home.other')">
